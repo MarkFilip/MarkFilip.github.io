@@ -1,0 +1,126 @@
+body {
+	margin: 0%; 
+}
+
+.navbar{
+    position: fixed;
+    background-color: rgb(85, 15, 3);
+    width: 100%;
+    top: 0;
+}
+
+.navbar a{
+    color: white;
+    display: block;
+    float: left;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1.25em;
+    font-family: Tahoma;
+    border-right: 1px solid white;
+}
+
+.navbar a:hover {
+    background-color: rgb(245, 178, 152);
+    color: black;
+    font-weight: bold;
+}
+
+video {
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+    left: -0.1px;
+}
+
+.overlay {
+    background-color: rgba(114, 37, 1, 0.2);
+    text-align: center;
+    margin-top: 33%;
+    padding: 30px;
+    color: white;
+}
+
+.overlay h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2em;
+}
+
+.overlay p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3em;
+}
+
+* { 
+	box-sizing: border-box; 
+}
+
+.column1 {
+    float: left;
+    width: 50%;
+    height: 465px;
+    padding: 30px;
+    background-color: rgb(110, 47, 36);
+}
+
+.column1, .column2 h3 {
+    font-family: Helvetica;
+    text-decoration: underline;
+    font-size: 2em;
+}
+
+.column1, .column2 p {
+    font-family: Helvetica;
+    padding: 3%;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+}
+
+.column1 img {
+    width: 100%;
+}
+
+.column2 {
+    float: left;
+    width: 50%;
+    height: 465px;
+    padding: 30px;
+    background-color: rgb(255, 181, 162);
+}
+
+.iphone img{
+    height: 410px;
+}
+
+form{
+    text-align: left;
+}
+
+input {
+    width: 90%;
+    height: 3em;
+    margin: 5px 1em;
+    border-radius: 8px;
+    border: 2px solid rgb(112, 26, 11);
+}
+
+.button {
+    width: 25%;
+}
+
+.button input{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.button input:hover{
+    background-color: black;
+    color: white;
+}
+
+footer {
+    background-color: white;
+    text-align: center;
+    color: black;
+}
