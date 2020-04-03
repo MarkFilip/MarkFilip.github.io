@@ -4,29 +4,34 @@
         <meta charset="utf-8">
         <title>Mark Filipkowski</title>
         <link rel="stylesheet" type="text/css" href="./css/Index_css.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
     </head>
     <body>
-    
+        <script>document.body.className += ' fade-out';</script>
         
         <!--Navbar-->
         <div class="navbar">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#github">GitHub</a>
-            <a href="#contact">Contact</a>
+            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
         </div>
         <br>
         <br>
         <!--End Navbar-->
 
+        
+
         <!--Background-->
         <div id="home">
-            <video muted autoplay loop>
+            <video id="vid" muted autoplay loop>
                 <source src="./videos/video.mp4" type="video/mp4">
                 Your browser does not support HTML5 video
             </video>
         </div>
         <!--End Background-->
+
+
 
         <!--Overlay-->
         <div class="overlay">
@@ -34,6 +39,28 @@
             <p>Welcome to my porfolio website. Here you will find information about my background and project experience.</p>
         </div>
         <!--End Overlay-->
+        <br><br>
+
+        
+
+        <!--SlideShow-->
+
+        <div class="container">
+            <img class="slides" src="./images/highres_297814655.jpeg">
+                <div class="slide-text">I'm here to help with your next project</div>
+            <img class="slides" src="./images/HTML5 CSS3 JS.jpg">
+                <div class="slide-text">I'm trained in HTML5, CSS3, JavaScript</div>
+            <img class="slides" src="./images/shutterstock_174878279.jpg">
+                <div class="slide-text">as well as the programming language Python</div>
+            <img class="slides" src="./images/shutterstock_496563817.jpg">
+                <div class="slide-text">and databases and SQL</div>
+            <img class="slides" src="./images/turned-on-black-iphone-7-edit.jpg">
+                <div class="slide-text">Contact me below!</div>
+        </div>
+
+        <!--End SlideShow-->
+       
+        <br><br>
 
         <!--About-->
         <div id="about">
@@ -54,7 +81,7 @@
         <!--End About-->
 
         <!--GitHub-->
-        <div id="github">
+        <div class="row" id="github">
 
             <!--Column 1-->
             <div class="column2">
@@ -73,42 +100,47 @@
         <!--End GitHub-->
 
         <!--Contact-->
-        <div id="contact">
 
-            <!--Column 1-->
-            <div class="column1">
-                <div class="iphone">
-                    <img src="./images/turned-on-black-iphone-7-displaying-hello-1275929.jpg" alt="Iphone on a desk displaying a greeting">
+        
+        
+        <div id="contact">
+            <div class="form-popup" id="myForm">
+                <div class="form-container">
+                    <div class="title-container">
+                        <h3>Contact</h3>
+                        <button  class="btnClose" onclick="closeForm()">&times;</button>
+                    </div>
+                    <form action="" method="GET">
+                        <label for="name">Name:</label> <br> <br>
+                        <input type="text" name="name" placeholder="Enter your name here"><br><br>
+                        <label for="email">Email Address:</label><br> <br>
+                        <input type="text" name="email" placeholder="Enter your email address here"><br><br>
+                        <label for="message">Message:</label><br><br>
+                        <input type="text" name="message" placeholder="Enter your message here"><br><br>
+                        <div class="button">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form> 
                 </div>
             </div>
-            <!--End Column 1-->
-
-            <!--Column 2-->
-            <div class="column2">
-                <h3>Contact</h3>
-                <form action="" method="GET">
-                    <label for="name">Name:</label> <br>
-                    <input type="text" name="name" placeholder="Enter your name here"><br>
-                    <label for="email">Email Address:</label><br>
-                    <input type="text" name="email" placeholder="Enter your email address here"><br>
-                    <label for="message">Message:</label><br>
-                    <input type="text" name="message" placeholder="Enter your message here"><br>
-                    <div class="button">
-                        <input type="submit" value="Submit">
-                    </div>
-
-                    
-
-                </form>
-                
-            </div>
-            <!--End Column 2-->
-
         </div>
-        <!--End Contact-->
+       
+       
+
+         <!--End Contact-->
 
         <footer>
             <a href="https://learncodinganywhere.com/">The Tech Academy</a>
         </footer>
+
+        <div class="sticky">
+            <button onclick="openForm()" class="btn-popup">CONTACT</button>
+        </div>
+        <script>
+            $(function() {
+                $('body').removeClass('fade-out');
+            });
+        </script>
+        <script src="./javascript/Index_js.js"></script>
     </body>
 </html>

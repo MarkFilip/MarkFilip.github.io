@@ -1,5 +1,16 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-	margin: 0%; 
+    margin: 0%; 
+    opacity: 1;
+    transition: 5s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
 }
 
 .navbar{
@@ -7,17 +18,49 @@ body {
     background-color: rgb(85, 15, 3);
     width: 100%;
     top: 0;
+    -webkit-animation: moveNav 3s;
+    animation: moveNav 3s;
 }
 
 .navbar a{
     color: white;
     display: block;
     float: left;
-    padding: 15px;
+    position: relative;
+    padding: .75vw;
     text-decoration: none;
     font-size: 1.25em;
     font-family: Tahoma;
     border-right: 1px solid white;
+    -webkit-animation: moveNavtext 3.75s;
+    animation: moveNavtext 3.75s;
+    cursor: pointer;
+}
+
+.overlay {
+    background-color: rgba(114, 37, 1, 0.2);
+    position: relative;
+    text-align: center;
+    margin-top: 33%;
+    padding: 30px;
+    color: white;
+    -webkit-animation: moveOverlay 3s;
+    animation: moveOverlay 3s;
+}
+
+@keyframes moveNav {
+    from {left: -100vw;}
+    to {left:0vw;}
+}
+
+@keyframes moveNavtext {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+@keyframes moveOverlay {
+    from {top: -100vw;}
+    to {top: 0vw;}
 }
 
 .navbar a:hover {
@@ -33,14 +76,6 @@ video {
     left: -0.1px;
 }
 
-.overlay {
-    background-color: rgba(114, 37, 1, 0.2);
-    text-align: center;
-    margin-top: 33%;
-    padding: 30px;
-    color: white;
-}
-
 .overlay h2 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 2em;
@@ -49,6 +84,61 @@ video {
 .overlay p {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.3em;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+  }
+  
+.container img {
+      width: 30vw;
+      height: 38vw;
+      border-radius: 10px;
+}
+
+.slide-text {
+    color: white;
+    padding: 1vw;
+    position: absolute;
+    font-size: 1.5vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 30vw;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.sticky {
+    position: fixed;
+    bottom: 1vw;
+    margin-left: 80vw;
+    -webkit-animation: moveContact 3s;
+    animation: moveContact 3s;
+}
+
+@keyframes moveContact {
+    from {right: -100vw;}
+    to {right:0vw;}
+}
+
+.slides{
+    display: none;
+}
+
+.sticky button{
+    padding: 1vw 5vw;
+    font-size: 1.5vw;
+    font-family: Helvetica;
+    border: 1px solid black;
+    color: white;
+    background-color:rgb(85, 15, 3);
+    cursor: pointer;
+}
+
+.sticky button:hover {
+    background-color: rgb(255, 181, 162);
+    color: black;
+    font-weight: bold;
 }
 
 * { 
@@ -92,8 +182,51 @@ video {
     height: 410px;
 }
 
-form{
-    text-align: left;
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 1px solid black;
+    z-index: 10;
+}
+
+.form-container {
+    width: 50vw;
+    padding-left:2vw;
+    padding-bottom:2vw;
+    padding-top: -2vw;
+    background-color: rgb(243, 239, 239);
+}
+
+.title-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.btnClose {
+    margin-left: 60%;
+    border: none;
+    background-color: rgb(243, 239, 239);
+    color: rgb(85, 15, 3);
+    font-size: 25px;
+    opacity: 0.7;
+    cursor: pointer;
+    position: relative;
+}
+
+.btnClose:hover {
+    opacity: 1;
+}
+
+.form-container h3 {
+    font-size: 4vw;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+label {
+    font-size: 2vw;
 }
 
 input {
@@ -101,15 +234,17 @@ input {
     height: 3em;
     margin: 5px 1em;
     border-radius: 8px;
+    background-color: rgb(255, 181, 162);
     border: 2px solid rgb(112, 26, 11);
 }
 
 .button {
-    width: 25%;
+    width: 100%;
+    margin-top: 2vw;
 }
 
 .button input{
-    background-color: white;
+    background-color:rgb(255, 181, 162);
     color: black;
     cursor: pointer;
 }
@@ -119,7 +254,14 @@ input {
     color: white;
 }
 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 footer {
+    display: block;
     background-color: white;
     text-align: center;
     color: black;
