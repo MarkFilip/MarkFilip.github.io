@@ -245,6 +245,8 @@ input {
 
 .button input{
     background-color:rgb(255, 181, 162);
+    font-weight: bold;
+    font-size: 1.2em;
     color: black;
     cursor: pointer;
 }
