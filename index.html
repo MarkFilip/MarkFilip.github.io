@@ -1,146 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="utf-8">
-        <title>Mark Filipkowski</title>
-        <link rel="stylesheet" type="text/css" href="./css/Index_css.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <title>Mark Filipkowski</title>
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="assets/css/main.css">
     </head>
-    <body>
-        <script>document.body.className += ' fade-out';</script>
-        
-        <!--Navbar-->
-        <div class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
-        </div>
-        <br>
-        <br>
-        <!--End Navbar-->
-
-        
-
-        <!--Background-->
-        <div id="home">
-            <video id="vid" muted autoplay loop>
-                <source src="./videos/video.mp4" type="video/mp4">
-                Your browser does not support HTML5 video
-            </video>
-        </div>
-        <!--End Background-->
-
-
-
-        <!--Overlay-->
-        <div class="overlay">
-            <h2>Mark Filipkowski's Portfolio</h2>
-            <p>Welcome to my porfolio website. Here you will find information about my background and project experience.</p>
-        </div>
-        <!--End Overlay-->
-        <br><br>
-
-        
-
-        <!--SlideShow-->
-
-        <div class="container">
-            <img class="slides" src="./images/highres_297814655.jpeg">
-                <div class="slide-text">I'm here to help with your next project</div>
-            <img class="slides" src="./images/HTML5 CSS3 JS.jpg">
-                <div class="slide-text">I'm trained in HTML5, CSS3, JavaScript</div>
-            <img class="slides" src="./images/shutterstock_174878279.jpg">
-                <div class="slide-text">as well as the programming language Python</div>
-            <img class="slides" src="./images/shutterstock_496563817.jpg">
-                <div class="slide-text">and databases and SQL</div>
-            <img class="slides" src="./images/turned-on-black-iphone-7-edit.jpg">
-                <div class="slide-text">Contact me below!</div>
-        </div>
-
-        <!--End SlideShow-->
-       
-        <br><br>
-
-        <!--About-->
-        <div id="about">
+    <body class="is-preload">
+        <video id="vid" muted="" autoplay="" loop="">
+            <source src="assets/images/Typing.mp4" type="video/mp4">
+            Your browser does not support HTML5 video
+        </video>
+        <!--Banner-->
+        <section id="banner">
             
-            <!--Column 1-->
-            <div class="column1">
-                <img src="./images/blur-bottle-bright-building-273238.jpg" alt="Laptop on workspace">
+            <div class="inner">
+                <div class="logo"><span class="icon fas fa-keyboard"></span></div>
+
+                <h2>Mark Filipkowski</h2>
+                <p>Welcome to my portfolio. <a href="#footer">Contact</a> me for your programming needs</p>
             </div>
-            <!--End Column 1-->
+        </section>
 
-            <!--Column 2-->
-            <div class="column2">
-                <h3>About</h3>
-                <p>I am a recent graduate of The Tech Academy in Salt<br><br> Lake City, Utah. I am currently pursuing a career as a<br><br> junior sowtware developer but in the past I have earned<br><br> a BS in Chemical Engineering from Cornell University.</p>
-            </div>
-            <!--End Column 2-->
-        </div>
-        <!--End About-->
+        <div id="wrapper">
 
-        <!--GitHub-->
-        <div class="row" id="experience">
+            <!--Languages Section-->
 
-            <!--Column 1-->
-            <div class="column2">
-                <h3>Experience</h3>
-                <p>If you want to view any of my projects or previous<br><br> experience you can connect to my <a href="https://github.com/MarkFilip">GitHub</a>,<br><br> <a href="https://www.linkedin.com/in/markfilipkowski/">LinkedIn</a>, or just simply view my <a href="./images/Mark_Filipkowski_Resume.pdf">resume</a>.</p>
-            </div>
-            <!--End Column 1-->
-
-            <!--Column 2-->
-            <div class="column1">
-                <img src="./images/business-code-coding-computer-270360.jpg" alt="Code on a computer">
-            </div>
-            <!--End Column 2-->
-
-        </div>
-        <!--End GitHub-->
-
-        <!--Contact-->
-
-        
-        
-        <div id="contact">
-            <div class="form-popup" id="myForm">
-                <div class="form-container">
-                    <div class="title-container">
-                        <h3>Contact</h3>
-                        <button  class="btnClose" onclick="closeForm()">&times;</button>
-                    </div>
-                    <form action="https://formspree.io/xrgypkwz" method="POST">
-                        <label for="name">Name:</label> <br> <br>
-                        <input type="text" name="name" placeholder="Enter your name here"><br><br>
-                        <label for="email">Email Address:</label><br> <br>
-                        <input type="text" name="email" placeholder="Enter your email address here"><br><br>
-                        <label for="message">Message:</label><br><br>
-                        <input type="text" name="message" placeholder="Enter your message here"><br><br>
-                        <div class="button">
-                            <input type="submit" value="Submit">
-                        </div>
-                    </form> 
+            <section id="one" class="wrapper spotlight style1 special">
+                <div class="inner1">
+                    <header class="major">
+                        <h2>Known Languages</h2>
+                        <p>I have experience working with Python, C#, JavaScript, HTML, CSS and SQL.</p>
+                    </header>
+                    <ul class="icons major">
+                        <li><span class="icon brands fa-python major style2"><span class="label">Python</span></span></li>
+                        <li><span class="icon solid fa-code major style4"><span class="label">C#</span></span></li>
+                        <li><span class="icon brands fa-js major style1"><span class="label">JavaScript</span></span></li>
+                        <li><span class="icon brands fa-html5 major style3"><span class="label">HTML</span></span></li>
+                        <li><span class="icon solid brands fa-css3 major style2"><span class="label">CSS</span></span></li>
+                        <li><span class="icon solid fa-database major style1"><span class="label">SQL</span></span></li>
+                    </ul>
                 </div>
-            </div>
+            </section>
+
+            <!--Project Display Section-->
+
+            <section id="four" class="wrapper alt style1">
+                <div class="inner">
+                    <h2 class="major">Projects</h2>
+                    <p>Here is a display of some some of my work</p>
+                    <section class="features">
+                        <article>
+                            <iframe class="image" width="560" height="315" src="https://www.youtube.com/embed/Msfq_nhBFB0" frameborder="0" allow="accelerometer; autoplay;
+                                clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                            <h3 class="major">Scene Better</h3>
+                            <p>A Django web application used to store ratings and reviews for movies the users has seen. Retrieves film information from OMDB API and uses Beautiful Soup for webscaping movie news.</p>
+                            <a href="https://github.com/MarkFilip/Live-Project" class="special">Learn more</a>
+                        </article>
+                        <article>
+                            <img src="./assets/images/coming-soon.jpg" alt="Coming Soon">
+                            <h3 class="major">CarFine Insurance</h3>
+                            <p>A C# and .NET Framework MVC web application meant to imitate a Car Insurance website. It takes a user's input on policy information and calculates a quote based on business logic. There is also an admin page that allows staff to view all of the quotes that have been issued.</p>
+                            <a href="https://github.com/MarkFilip/C-Sharp-Coding-Projects/tree/master/CarInsurance" class="special">Learn more</a>
+                        </article>
+                        <article>
+                            <img src="./assets/images/coming-soon.jpg" alt="Coming Soon">
+                            <h3 class="major">File Transfer Program</h3>
+                            <p>An application that allows the user to transfer all files of a specific extension from one folder to another. A databse logs all of the transferred files. The GUI was created using the Tkinter module.</p>
+                            <a href="https://github.com/MarkFilip/Basic-Python-Projects/tree/master/Check%20files" class="special">Learn more</a>
+                        </article>
+                        <article>
+                            <img src="./assets/images/coming-soon.jpg" alt="Coming Soon">
+                            <h3 class="major">Academy Cinemas</h3>
+                            <p>A movie theater website created utilizing Bootsrap Framework.</p>
+                            <a href="https://github.com/MarkFilip/HTML-and-CSS-Projects/tree/master/Movie_Theater" class="special">Learn more</a>
+                        </article>
+                    </section>
+                    <ul class="actions">
+                        <li><a href="https://github.com/MarkFilip" class="button">Browse All</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!--Contact Section-->
+
+            <section id="footer">
+                <div class="inner">
+                    <h2 class="major">Contact</h2>
+                    <p>Reach out to me using any of these methods</p>
+                    <form action="https://formspree.io/xrgypkwz" method="POST">
+                        <div class="fields">
+                            <div class="field">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Send Message"></li>
+                        </ul>
+                    </form>
+                    <ul class="contact">	
+                        <li class="icon solid fa-phone">(631) 790-1450</li>
+                        <li class="icon solid fa-envelope">4markfilipkowski@gmail.com</li>
+                        <li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/markfilipkowski/">linkedin.com/in/markfilipkowski/</a></li>
+                        <li class="icon brands fa-github"><a href="https://github.com/MarkFilip">github.com/MarkFilip</a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>© Untitled Inc. All rights reserved.</li><li>Modified Design Originally Created by: <a href="http://html5up.net">HTML5 UP</a></li>
+                    </ul>
+                </div>
+            </section>
+
         </div>
-       
-       
 
-         <!--End Contact-->
-
-        <footer>
-            <a>&copy Mark Filipkowski, 2020</a>
-        </footer>
-
-        <div class="sticky">
-            <button onclick="openForm()" class="btn-popup">CONTACT</button>
-        </div>
-        <script>
-            $(function() {
-                $('body').removeClass('fade-out');
-            });
-        </script>
-        <script src="./javascript/Index_js.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
