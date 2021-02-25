@@ -8,7 +8,10 @@
 
 	var	$window = $(window),
 		$body = $('body');
-
+		$header = $('#header'),
+		$banner = $('#banner');
+	
+	
 	
 
 	// Play initial animations on page load.
@@ -17,7 +20,21 @@
 				$body.removeClass('is-preload');
 			}, 100);
 		});
+		
+	// Header.
+		if ($banner.length > 0
+		&&	$header.hasClass('alt')) {
 
+			$window.on('resize', function() { $window.trigger('scroll'); });
 
+			$banner.scrollex({
+				bottom:		$header.outerHeight(),
+				terminate:	function() { $header.removeClass('alt'); },
+				enter:		function() { $header.addClass('alt'); },
+				leave:		function() { $header.removeClass('alt'); }
+			});
+
+		}
+	
 
 })(jQuery);
